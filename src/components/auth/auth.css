@@ -1,0 +1,81 @@
+.gate {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.gate-card {
+  width: min(420px, 100%);
+  background: linear-gradient(180deg, var(--panel-2), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: var(--glow);
+}
+.gate-card .orb {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: conic-gradient(from 200deg, var(--accent), var(--accent-2), var(--warm), var(--accent));
+  box-shadow: 0 0 22px -2px var(--accent);
+  margin-bottom: 16px;
+}
+.gate-card h2 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.gate-card p {
+  color: var(--muted);
+  margin: 0 0 22px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.field label {
+  font-size: 0.76rem;
+  color: var(--faint);
+  letter-spacing: 0.04em;
+}
+.field input {
+  width: 100%;
+}
+.gate-card .btn-primary {
+  width: 100%;
+  margin-top: 6px;
+}
+.msg {
+  font-size: 0.82rem;
+  margin-top: 14px;
+  min-height: 1.1em;
+  line-height: 1.4;
+}
+.msg.err {
+  color: var(--warm);
+}
+.msg.ok {
+  color: var(--accent-2);
+}
+.switch {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.switch button {
+  color: var(--accent);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.switch button:hover {
+  text-decoration: underline;
+}

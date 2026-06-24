@@ -1,0 +1,25 @@
+/* Design tokens — the dreamy-dark system for One Place. */
+:root {
+  /* Surfaces */
+  --ground: #0b0a12;
+  --panel: rgba(255, 255, 255, 0.045);
+  --panel-2: rgba(255, 255, 255, 0.075);
+  --line: rgba(255, 255, 255, 0.09);
+
+  /* Text */
+  --text: #ece9f5;
+  --muted: #a7a1c2;
+  --faint: #6f6990;
+
+  /* Accents */
+  --accent: #b388ff;
+  --accent-2: #5eead4;
+  --warm: #ff8fb1;
+  --yt: #ff2d2d;
+  --sp: #1ed760;
+
+  /* Shape & motion */
+  --r: 16px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --glow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
+}

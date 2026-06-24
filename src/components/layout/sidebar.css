@@ -1,0 +1,162 @@
+aside {
+  margin: 12px 0 12px 12px;
+  border-radius: 20px;
+  background: var(--panel);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--line);
+  padding: 22px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 4px 8px 20px;
+}
+.brand .orb {
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  background: conic-gradient(from 200deg, var(--accent), var(--accent-2), var(--warm), var(--accent));
+  box-shadow: 0 0 22px -2px var(--accent);
+  animation: spin 16s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.brand h1 {
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.brand small {
+  display: block;
+  color: var(--faint);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.nav-label {
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 14px 10px 8px;
+}
+.pl {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 11px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  transition: all 0.2s var(--ease);
+}
+.pl:hover {
+  background: var(--panel-2);
+  color: var(--text);
+}
+.pl.on {
+  color: var(--text);
+  background: linear-gradient(100deg, rgba(179, 136, 255, 0.18), rgba(94, 234, 212, 0.06));
+  border-color: rgba(179, 136, 255, 0.35);
+}
+.pl .ic {
+  width: 16px;
+  text-align: center;
+  opacity: 0.85;
+}
+.pl .ct {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--faint);
+}
+.pl.on .ct {
+  color: var(--accent);
+}
+.pl .x {
+  width: 18px;
+  text-align: center;
+  opacity: 0;
+  color: var(--faint);
+  border-radius: 6px;
+}
+.pl:hover .x {
+  opacity: 0.7;
+}
+.pl .x:hover {
+  opacity: 1;
+  color: var(--warm);
+}
+.newpl {
+  margin-top: 12px;
+  display: flex;
+  gap: 6px;
+}
+.newpl input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 11px;
+}
+.newpl button {
+  padding: 0 14px;
+}
+aside .foot {
+  margin-top: auto;
+  padding-top: 16px;
+}
+.me {
+  font-size: 0.76rem;
+  color: var(--faint);
+  padding: 4px 10px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.signout {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  aside {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    margin: 0;
+    border-radius: 18px 18px 0 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    z-index: 20;
+    padding: 12px;
+  }
+  aside .brand,
+  aside .nav-label,
+  aside .newpl,
+  aside .foot {
+    display: none;
+  }
+  .pl {
+    width: auto;
+    white-space: nowrap;
+  }
+}
